@@ -9,7 +9,7 @@
           var lunchItems=  $scope.menu.split(',');
         if (lunchItems.length===1 && lunchItems[0]===""){
     $scope.message="Please enter data first";
-  } else if(lunchItems.length>2){
+  } else if(lunchItems.length>3){
     $scope.message="Too much!";
   }
     else {
