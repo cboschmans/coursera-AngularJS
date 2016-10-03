@@ -10,10 +10,10 @@
         if (lunchItems.length===1 && lunchItems[0]===""){
     $scope.message="Please enter data first";
   } else if(lunchItems.length>2){
-    $scope.message="Too much";
+    $scope.message="Too much!";
   }
     else {
-    $scope.message="Enjoy";
+    $scope.message="Enjoy!";
   }
   };
 };
