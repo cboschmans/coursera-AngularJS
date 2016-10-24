@@ -1,0 +1,9 @@
+<ul>
+  <li ng-repeat="item in menuResult.list">
+  <div>  name: <span ng-bind="item.name"></span><div>
+<div>short name: <span ng-bind="item.short_name"></span></div>
+<div>description: <span ng-bind="item.description"></span><div>
+  <div><button ng-click="menuResult.onRemove({index:$index})" class="btn btn-primary" >Don't want this one!</button></div>
+  </li>
+</ul>
+<span ng-if="menuResult.isEmpty()" ng-cloak>Nothing found !</span>
