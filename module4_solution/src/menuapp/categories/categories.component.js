@@ -1,0 +1,9 @@
+(function(){
+  angular.module('MenuApp')
+  .component('categories',{
+    templateUrl:'src/menuapp/categories/categories.component.html',
+    controllerAs:"categories",
+      bindings:{
+      list:'<'}
+    });
+  })();
