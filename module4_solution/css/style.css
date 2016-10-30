@@ -378,7 +378,7 @@ Main
     }
   }
 .category h1 {
-  position: relative;
+  position: absolute;;
   color: #ffffff;
   font-size: 150%;
   line-height: 2em;

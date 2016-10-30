@@ -11,8 +11,10 @@ MenuDataService.$inject=['$http','ApiBasePath'];
       return $http({method:'GET',url:(ApiBasePath+"/categories.json")});
     };
     dataService.getItemsForCategory=function(shortName){
-      console.log(shortName)
-        return $http({method:'GET',url:(ApiBasePath+"/menu_items.json"),params:{category:shortName}});
+    if (shortName!=undefined  && shortName!=null){
+    dataService.categoryShort=shortName;
+  }
+        return $http({method:'GET',url:(ApiBasePath+"/menu_items.json"),params:{category:dataService.categoryShort}});
     };
   }
 })();
