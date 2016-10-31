@@ -20,12 +20,11 @@
       }
     }).state('items',{
       url:'/category/{category_name}',
-params:{category_short_name:null},
       templateUrl:'src/menuapp/items/items.html',
       controller:'ItemsController as category',
       resolve:{
         items:['$stateParams','MenuDataService',function($stateParams,MenuDataService){
-          return MenuDataService.getItemsForCategory($stateParams.category_short_name);
+          return MenuDataService.getItemsForCategory($stateParams.category_name);
         } ],
         title:['$stateParams',function($stateParams){
           return $stateParams.category_name;

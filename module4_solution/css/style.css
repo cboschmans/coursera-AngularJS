@@ -17,7 +17,7 @@ audio:not([controls]) {display: none;height: 0;}
 html {font-family: sans-serif;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}
 body {margin: 0;}
 a:focus {outline: thin dotted;color: #ffffff;}
-a:active,a:hover {outline: 0;color: #ffffff;}
+a:active,a:hover {outline: 0;color: #ffffff;border-bottom: 1px dotted;}
 h1 {font-size: 2em;margin: 0.67em 0;}
 abbr[title] {border-bottom: 1px dotted;}
 b,strong {font-weight: bold;}
@@ -89,6 +89,7 @@ Page wrapper
 */
 .page-wrapper {
   position: relative;
+   z-index:2; ;
   width: 100%;
   max-width: 120em;
   margin: 0 auto;
@@ -359,6 +360,7 @@ Main
   color: #ffffff;
   margin: 0;
   padding: 2em 1em;
+  padding-bottom:30em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -378,8 +380,10 @@ Main
     }
   }
 .category h1 {
-  position: absolute;;
+  position: absolute;
+  float:left;
   color: #ffffff;
+  display:block;
   font-size: 150%;
   line-height: 2em;
   top: 12em;
