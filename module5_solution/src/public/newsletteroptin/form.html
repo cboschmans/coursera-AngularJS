@@ -1,0 +1,36 @@
+<h1>Register for the newsletter</h1>
+<form name="registration" novalidate >
+<div>
+  <input type="text" name="firstname" ng-model="optin.firstName" placeholder="firstname" required>
+  <span ng-if="registration.firstname.$touched && registration.firstname.$error.required">First name is required</span>
+</div>
+<div>
+  <input type="text" name="lastname" ng-model="optin.lastName" placeholder="lastname" required>
+  <span ng-if="registration.lastname.$touched && registration.lastname.$error.required">Last name is required</span>
+</div>
+<div>
+  <input type="email" name="email" ng-model="optin.email" placeholder="email" required>
+  <span ng-if="registration.email.$touched && registration.email.$error.required">Email is required. </span>
+  <span ng-if="registration.email.$touched && registration.email.$invalid">
+                                              Valid email is required.</span>
+</div>
+<div>
+  <input type="text" name="phonenumber" ng-model="optin.phoneNumber"  ng-minlength="12"
+                   ng-maxlength="12" pattern="(\d{3})-(\d{3})-(\d{4})" placeholder="phonenumber as ###-###-####" required>
+  <span ng-if="registration.phonenumber.$touched && registration.phonenumber.$invalid">
+                                              Valid phone number is required. </span>
+  <span ng-if="registration.phonenumber.$touched && registration.phonenumber.$error.required">
+                                              Phone number cannot be left empty.</span>
+</div>
+<div>
+  <input type="text" name="favorite" ng-model="optin.favorite"  placeholder="favorite dish as letter/number combination" lncombinationexists required>
+  <span ng-if="registration.favorite.$touched && registration.favorite.$error.required">
+                           Favorite dish as short letter/number combination is required</span>
+                             <span ng-if="registration.favorite.$pending.lncombinationexists">Checking if this combination exists...</span>
+  <span ng-if="registration.favorite.$touched && registration.favorite.$error.lncombinationexists">No such menu number exists</span>
+</div>
+<div>
+  <input type="submit" ng-click="optin.register()"  ng-disabled="registration.$invalid" value="Send">
+  <span ng-if="registration.$submitted">Your information has been saved</span>
+  </div>
+</form>

@@ -1,0 +1,10 @@
+<div class="yourinfo">
+  <h1>Your info</h1>
+<span ng-if="!info.user.firstName">Not Signed Up Yet. <a ui-sref="public.optin">Sign up Now!</a></span>
+<div ng-if="info.user.firstName">
+<div>your firstname is:  <span ng-bind="info.user.firstName"></span> </div>
+<div>your lastname is:    <span ng-bind="info.user.lastName"></span> </div>
+<div>your email: <span ng-bind="info.user.email"></span> </div>
+<div>your phonenumber: <span ng-bind="info.user.phoneNumber"></span><div>
+<div><span class="favorite-span">your favorite: </span><menu-item menu-item="info.user.favorite"></menu-item></div>
+</div>
